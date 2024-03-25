@@ -8,7 +8,7 @@ Dessa forma, quando falamos de uma _API RESTful_ simplesmente estamos dizendo qu
 ## Clientes e Recursos
 Os **clientes** são usuários ou sistemas de software interessados em obter informações da web. Eles podem ser pessoas ou softwares que interagem com a API para acessar dados ou funcionalidades específicas. Já os **recursos** referem-se aos dados ou informações disponibilizados por diversas aplicações para seus usuários. Estes podem incluir uma variedade de tipos de dados, como imagens, vídeos, texto ou números. A maquina que é reponsável por disponibilizar o recurso ao cliente é normalmente chamada de **servidor**.
 
-![alt text](1.png)
+![alt text](images/base.png)
 ## Constraints
 No geral, temos 6 restrições (sendo 5 delas obrigatórias e 1 opcional) para que uma _API_ seja considerada verdadeiramente _RESTful_:
 
@@ -50,13 +50,13 @@ No geral, temos 6 restrições (sendo 5 delas obrigatórias e 1 opcional) para q
     ```
 3. ### Stateless 
    A restrição _stateless_ implica que nenhum estado (contexto ou informação do cliente) deve ser armazenado pelo servidor, ou seja, cada requisição enviada pelo cliente deve conter todos os dados necessários para que o servidor entenda e complete-a sem necessitar de nenhum estado mantido pelo mesmo entre as requisições. A restrição favorece a escalabilidade horizontal já que não é preciso, necessariamente, associar as requisições enviadas por um cliente com sempre o mesmo servidor mas sim com qualquer outro presente na infraestrutura.
-   ![alt text](Stateless-REST-API.png)
+   ![alt text](images/Stateless.png)
 4. ### Cacheable
    A restrição _Cacheable_ determina que as respostas da _API_ devem ser explicitamente marcadas como cacheáveis ou não-cacheáveis, utilizando cabeçalhos HTTP apropriados. O cache pode ser implementado em diferentes níveis e pode ser configurado para diferentes estratégias. O uso eficaz de cache pode resultar em uma melhoria significativa na eficiência, perfomance e na escalabilidade da API, especialmente em cenários onde os dados são estáticos ou mudam com pouca frequência.
 5. ### Layered system
    O princípio do sistema em camadas elenca que não importa o quão complexos estão sendo os passos que o servidor está realizando para atender as requisições ou quantas camadas diferentes ele teve de percorrer (é possível, por exemplo, que as _APIs_ estejam implantadas no servidor X e os dados armazenados no Y) o cliente não precisa saber destes detalhes quando acessa um enpoint. Esse princípio também vem acompahado de uma significativa melhora na segurança.
 
-    ![alt text](afb40908-19e7-428c-adae-2bd8a2ba2b12.png)
+    ![alt text](images/layer.png)
     
 6. ### Code on Demand (_opcional_)
    Code on Demand é uma _constraint_ opcional para tornar uma *API* *RESTful* mas ela configura um recurso interessante caso seja bem utilizado. O princípio se refere a capacidade de retornar não apenas representações estáticas de recursos na forma de JSON ou XML mas também um código executável, por exemplo, os clientes podem chamar sua API para obter  scripts, applets ou outras formas de código que são transferidas do servidor para o cliente e executadas localmente.
