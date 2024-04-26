@@ -20,7 +20,7 @@ public class Exercicio2 {
             System.exit(0);
         } catch (InputMismatchException e) {
             Clear.clearConsole();
-            System.out.println("Algum numero digitado e invalido");
+            System.out.println("Algum numero invalido foi digitado, tente novamente");
             scanner.close();
             System.exit(0);
         }
